@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: fraudspamcontroll-service           
+#Springdoc
+springdoc:
+  packagesToScan: com.ecommerce.fraudspamcontrollservice.controlller
+               
