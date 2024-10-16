@@ -28,7 +28,7 @@ public class Stock extends Auditor implements Serializable {
     private Long id;
     //findInStock(productId, skuCode, quantity)
     //@OneToMany
-    //private Map<Product, String> inStockProduct;// Map<Product , skuCode>
+    //private Set<Product, String> inStockProduct;// Map<Product , skuCode>
     private Long quantity;// also you can advise user that 4 quality is not available now, at best 3 are available you can buy 3 quality of selected item
     private LocalDate dateOfStocking;
     @OneToMany

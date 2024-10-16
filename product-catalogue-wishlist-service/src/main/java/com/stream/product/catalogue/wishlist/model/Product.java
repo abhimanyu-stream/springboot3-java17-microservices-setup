@@ -1,24 +1,23 @@
-package com.stream.inventory.stock.model;
+package com.stream.product.catalogue.wishlist.model;
 
-import com.stream.inventory.stock.enums.ProductCategory;
+
+import com.stream.product.catalogue.wishlist.enums.*;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Set;
 import java.util.UUID;
 
+
+@Setter
+@Getter
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-@Data
+@AllArgsConstructor
 @Entity
 @Table(name = "product")
-public class Product extends Auditor implements Serializable {
-
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,10 +25,19 @@ public class Product extends Auditor implements Serializable {
     private UUID productId;//findByProductId
     private String skuCode;// findBySkuCode
     private String brandName;
+
+
     private ProductCategory productCategory;
+    private ProductSubCategory productSubCategory;
+    private AgeGroup ageGroup;
+    private Gender gender;
+    private Color color;
+    private Size size;
+
+
+
     private String productName;
     private String imageUrl;
-    private String color;
     private BigDecimal price;
     private Double discount;
     private String arrival;// old, new
@@ -37,5 +45,13 @@ public class Product extends Auditor implements Serializable {
     private String manufacturedCompanyLocation;//address
     private String manufacturedCompanyCountry;
     private String manufacturedDate;
+    private String featureDetails;// like Electronics -> SmartPhone->>200mega pixel camera, dual camera, AI based adjustments etc
     private String description;
+
+
 }
+
+/**
+   Category categoryObject= new Category(ProductCategory.ELECTRONICS, ProductSubCategory.SMARTPHONES,Gender.NONE,AgeGroup.ADULTS,Color.BLACK);
+   Product product = new Product("Samsung Galaxy S21",799.99,category);
+ * */

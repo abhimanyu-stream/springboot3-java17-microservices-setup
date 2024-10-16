@@ -1,24 +1,20 @@
-package com.stream.inventory.stock.model;
+package com.ecommerce.customerservice.model;
 
-import com.stream.inventory.stock.enums.ProductCategory;
+import com.ecommerce.customerservice.enums.ProductCategory;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.UUID;
 
+@Setter
+@Getter
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-@Data
+@AllArgsConstructor
 @Entity
 @Table(name = "product")
-public class Product extends Auditor implements Serializable {
-
+public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

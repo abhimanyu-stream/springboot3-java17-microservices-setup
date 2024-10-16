@@ -1,0 +1,48 @@
+package com.stream.product.catalogue.wishlist.enums;
+
+import lombok.Getter;
+
+@Getter
+public enum Color {
+    RED,
+    BLUE,
+    GREEN,
+    BLACK,
+    WHITE,
+    YELLOW,
+    ORANGE,
+    PURPLE,
+    PINK,
+    BROWN,
+    GREY,
+    BEIGE,
+    CYAN,
+    MAGENTA,
+    VIOLET,
+    INDIGO,
+    GOLD,
+    SILVER,
+    MAROON,
+    NAVY,
+    LAVENDER,
+    TURQUOISE,
+    OLIVE,
+    TEAL,
+    BRONZE,
+    IVORY,
+    PEACH,
+    MINT,
+    BURGUNDY,
+    CHARCOAL,
+    COPPER,
+    CHOCOLATE,
+    SALMON,
+    CRIMSON,
+    LIME,
+    EMERALD,
+    SAPPHIRE,
+    RUBY,
+    CORAL,
+    TAN,
+    MULTICOLOR;
+}
