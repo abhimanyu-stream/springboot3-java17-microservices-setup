@@ -1,18 +1,22 @@
 package com.stream.product.catalogue.wishlist.dto;
 
 import com.stream.product.catalogue.wishlist.enums.*;
-
 import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.UUID;
+
 @Setter
 @Getter
 @ToString
-@Builder
-public class ProductRequest {
+@NoArgsConstructor
+public class ProductResponse {
 
 
+    private Long id;
+    private UUID productId;//findByProductId
+    private String skuCode;// findBySkuCode
     private String brandName;
     private ProductCategory productCategory;
     private ProductSubCategory productSubCategory;

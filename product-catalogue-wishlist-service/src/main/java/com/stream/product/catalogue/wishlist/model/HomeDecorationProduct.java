@@ -1,18 +1,27 @@
-package com.stream.product.catalogue.wishlist.dto;
+package com.stream.product.catalogue.wishlist.model;
 
 import com.stream.product.catalogue.wishlist.enums.*;
-
+import com.stream.product.catalogue.wishlist.factory.Product;
+import jakarta.persistence.*;
 import lombok.*;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
-@Setter
+import java.util.UUID;
+
 @Getter
-@ToString
+@Setter
 @Builder
-public class ProductRequest {
-
-
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name = "home_decoration_product")
+public class HomeDecorationProduct implements Product {
+    //Step 1: Define the Product Interface or abstract class
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private UUID productId;//findByProductId
+    private String skuCode;// findBySkuCode
     private String brandName;
     private ProductCategory productCategory;
     private ProductSubCategory productSubCategory;
@@ -34,4 +43,10 @@ public class ProductRequest {
     private String manufacturedDate;
     private String featureDetails;// like Electronics -> SmartPhone->>200mega pixel camera, dual camera, AI based adjustments etc
     private String description;
+
+
+    @Override
+    public String getProductInformation() {
+        return null;
+    }
 }

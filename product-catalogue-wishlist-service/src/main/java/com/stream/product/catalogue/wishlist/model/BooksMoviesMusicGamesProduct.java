@@ -1,32 +1,28 @@
 package com.stream.product.catalogue.wishlist.model;
 
-
 import com.stream.product.catalogue.wishlist.enums.*;
+import com.stream.product.catalogue.wishlist.factory.Product;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.util.Set;
 import java.util.UUID;
 
-
-@Setter
 @Getter
+@Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "product")
-public class Product {
-
+@Table(name = "books_movies_music_games_product")
+public class BooksMoviesMusicGamesProduct implements Product {
+    //Step 1: Define the Product Interface or abstract class
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private UUID productId;//findByProductId
     private String skuCode;// findBySkuCode
     private String brandName;
-
-
     private ProductCategory productCategory;
     private ProductSubCategory productSubCategory;
     private AgeGroup ageGroup;
@@ -49,9 +45,8 @@ public class Product {
     private String description;
 
 
+    @Override
+    public String getProductInformation() {
+        return null;
+    }
 }
-
-/**
-   Category categoryObject= new Category(ProductCategory.ELECTRONICS, ProductSubCategory.SMARTPHONES,Gender.NONE,AgeGroup.ADULTS,Color.BLACK);
-   Product product = new Product("Samsung Galaxy S21",799.99,category);
- * */
