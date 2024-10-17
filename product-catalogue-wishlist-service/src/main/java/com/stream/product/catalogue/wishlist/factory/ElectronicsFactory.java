@@ -2,6 +2,8 @@ package com.stream.product.catalogue.wishlist.factory;
 
 import com.stream.product.catalogue.wishlist.dto.ProductRequest;
 import com.stream.product.catalogue.wishlist.model.ElectronicsProduct;
+import com.stream.product.catalogue.wishlist.util.SKUCode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
@@ -11,6 +13,9 @@ public class ElectronicsFactory implements ElectronicsProductFactory {
     //ConcreteFactory
     //Step 4: Create Concrete Factories
 
+
+
+
     @Override
     public ElectronicsProduct createElectronicsProduct(ProductRequest productRequest) {
         return new ElectronicsProduct().builder()
@@ -19,7 +24,7 @@ public class ElectronicsFactory implements ElectronicsProductFactory {
                 .brandName(productRequest.getBrandName())
                 .productName(productRequest.getProductName())
                 .productId(UUID.randomUUID())
-                .skuCode("skucode")
+                .skuCode(SKUCode.generateSkuCode(productRequest.getBrandName(),productRequest.getProductName(),productRequest.getProductCategory().toString(),productRequest.getProductSubCategory().toString()))
                 .color(productRequest.getColor())
                 .arrival(productRequest.getArrival())
                 .gender(productRequest.getGender())
