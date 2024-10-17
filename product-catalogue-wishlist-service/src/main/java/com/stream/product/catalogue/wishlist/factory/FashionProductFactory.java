@@ -1,7 +1,10 @@
 package com.stream.product.catalogue.wishlist.factory;
 
+import com.stream.product.catalogue.wishlist.dto.ProductRequest;
 import com.stream.product.catalogue.wishlist.model.FashionProduct;
+import org.springframework.stereotype.Component;
+
 
 public interface FashionProductFactory {
-    public abstract FashionProduct createFashionProduct();
+    public abstract FashionProduct createFashionProduct(ProductRequest productRequest);
 }

@@ -1,6 +1,6 @@
-package com.ecommerce.customerservice.model;
+package com.stream.customer.service.model;
 
-import com.ecommerce.customerservice.enums.ProductCategory;
+import com.stream.customer.service.enums.ProductCategory;
 import jakarta.persistence.*;
 import lombok.*;
 

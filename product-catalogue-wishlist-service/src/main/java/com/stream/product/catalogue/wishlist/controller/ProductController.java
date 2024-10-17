@@ -32,47 +32,86 @@ public class ProductController {
     @PostMapping("/electronics")
     public ResponseEntity<?> createElectronicsProduct(@RequestBody ProductRequest productRequest){
 
-        //Product electronicsProduct = productService.createElectronicsProduct(productRequest);
-        //ProductResponse productResponse = new ProductResponse();
+        Product electronicsProduct = productService.createElectronicsProduct(productRequest);
 
-        //BeanUtils.copyProperties(electronicsProduct, productResponse);
+        ProductResponse productResponse = new ProductResponse();
+        BeanUtils.copyProperties(electronicsProduct, productResponse);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Custom-Header", "My custom header value");
         headers.set("Content-Type", "application/json");
-        ElectronicsProduct electronicsProduct = productService.createElectronicsProduct(productRequest);
-        return new ResponseEntity<>(electronicsProduct,headers,HttpStatus.CREATED);
-    }
-    /*@PostMapping("/fashion")
-    public Product createFashionProduct(@RequestBody ProductRequest productRequest){
+        //ElectronicsProduct electronicsProduct = productService.createElectronicsProduct(productRequest);
 
-        return productService.createFashionProduct(productRequest);
+        return new ResponseEntity<>(productResponse,headers,HttpStatus.CREATED);
+    }
+    @PostMapping("/fashion")
+    public ResponseEntity<?> createFashionProduct(@RequestBody ProductRequest productRequest){
+
+        Product fashionProduct = productService.createFashionProduct(productRequest);
+        ProductResponse productResponse = new ProductResponse();
+        BeanUtils.copyProperties(fashionProduct, productResponse);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Custom-Header", "My custom header value");
+        headers.set("Content-Type", "application/json");
+        return new ResponseEntity<>(productResponse,headers,HttpStatus.CREATED);
     }
     @PostMapping("/booksmoviesmusicgames")
-    public Product createBooksMoviesMusicGamesProduct(@RequestBody ProductRequest productRequest){
+    public ResponseEntity<?> createBooksMoviesMusicGamesProduct(@RequestBody ProductRequest productRequest){
+        Product booksMoviesMusicGamesProduct = productService.createBooksMoviesMusicGamesProduct(productRequest);
 
-
-        return productService.createBooksMoviesMusicGamesProduct(productRequest);
+        ProductResponse productResponse = new ProductResponse();
+        BeanUtils.copyProperties(booksMoviesMusicGamesProduct, productResponse);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Custom-Header", "My custom header value");
+        headers.set("Content-Type", "application/json");
+        return new ResponseEntity<>(productResponse,headers,HttpStatus.CREATED);
     }
     @PostMapping("/beautyandpersonalcare")
-    public Product createBeautyAndPersonalCareProduct(@RequestBody ProductRequest productRequest){
+    public ResponseEntity<?> createBeautyAndPersonalCareProduct(@RequestBody ProductRequest productRequest){
 
-        return productService.createBeautyAndPersonalCareProduct(productRequest);
+        Product beautyAndPersonalCareProduct =  productService.createBeautyAndPersonalCareProduct(productRequest);
+
+        ProductResponse productResponse = new ProductResponse();
+        BeanUtils.copyProperties(beautyAndPersonalCareProduct, productResponse);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Custom-Header", "My custom header value");
+        headers.set("Content-Type", "application/json");
+        return new ResponseEntity<>(productResponse,headers,HttpStatus.CREATED);
+
     }
     @PostMapping("/foodandbeverage")
-    public Product createFoodAndBeverageProduct(@RequestBody ProductRequest productRequest){
+    public ResponseEntity<?> createFoodAndBeverageProduct(@RequestBody ProductRequest productRequest){
 
-        return productService.createFoodAndBeverageProduct(productRequest);
+        Product foodAndBeverageProduct = productService.createFoodAndBeverageProduct(productRequest);
+
+        ProductResponse productResponse = new ProductResponse();
+        BeanUtils.copyProperties(foodAndBeverageProduct, productResponse);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Custom-Header", "My custom header value");
+        headers.set("Content-Type", "application/json");
+        return new ResponseEntity<>(productResponse,headers,HttpStatus.CREATED);
     }
     @PostMapping("/grocery")
-    public Product createGroceryProduct(@RequestBody ProductRequest productRequest){
+    public ResponseEntity<?> createGroceryProduct(@RequestBody ProductRequest productRequest){
 
-        return productService.createGroceryProduct(productRequest);
+        Product groceryProduct = productService.createGroceryProduct(productRequest);
+
+        ProductResponse productResponse = new ProductResponse();
+        BeanUtils.copyProperties(groceryProduct, productResponse);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Custom-Header", "My custom header value");
+        headers.set("Content-Type", "application/json");
+        return new ResponseEntity<>(productResponse,headers,HttpStatus.CREATED);
     }
     @PostMapping("/homedecoration")
-    public Product createHomeDecorationProduct(@RequestBody ProductRequest productRequest){
+    public ResponseEntity<?> createHomeDecorationProduct(@RequestBody ProductRequest productRequest){
 
-        return productService.createHomeDecorationProduct(productRequest);
+        Product homeDecorationProduct = productService.createHomeDecorationProduct(productRequest);
+
+        ProductResponse productResponse = new ProductResponse();
+        BeanUtils.copyProperties(homeDecorationProduct, productResponse);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Custom-Header", "My custom header value");
+        headers.set("Content-Type", "application/json");
+        return new ResponseEntity<>(productResponse,headers,HttpStatus.CREATED);
     }
-*/
-
 }

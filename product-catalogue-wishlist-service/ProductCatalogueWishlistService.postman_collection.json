@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "75806100-e472-4d7b-b21f-4c61d5b99feb",
+		"name": "ProductCatalogueWishlistService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25143373"
+	},
+	"item": [
+		{
+			"name": "Create ElectronicProduct",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brandName\": \"Dell\",\r\n    \"productCategory\": \"ELECTRONICS\",\r\n    \"productSubCategory\": \"LAPTOPS\",\r\n    \"ageGroup\":\"ADULT\",\r\n    \"gender\": \"NONE\",\r\n    \"color\": \"SILVER\",\r\n    \"size\": \"L\",\r\n    \"productName\":\"Inspirion\",\r\n    \"imageUrl\": \"https://192.0.0.10:8080/dell/inspiron/aio/windows/allinone/5400.jpge\",\r\n    \"price\": \"500000.00\",\r\n    \"discount\": \"50.0\",\r\n    \"arrival\": \"BRANDNEWLAUNCH\",\r\n    \"manufacturedCompany\": \"Dell\",\r\n    \"manufacturedCompanyLocation\": \"Padma\",\r\n    \"manufacturedCompanyCountry\": \"India\",\r\n    \"manufacturedDate\": \"2021/01/01\",\r\n    \"featureDetails\": \"MacOS\",\r\n    \"description\": \"i12 Intel 10th Genenration Sata Hard Disk 120GB Ram 4TB Hard Disk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8100/api/electronics?author={{author}}",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"electronics"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "{{author}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create FashionProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brandName\": \"RedTape\",\r\n    \"productCategory\": \"FASHION\",\r\n    \"productSubCategory\": \"CLOTHING\",\r\n    \"ageGroup\":\"TEENS\",\r\n    \"gender\": \"FEMALE\",\r\n    \"color\": \"PURPLE\",\r\n    \"size\": \"M\",\r\n    \"productName\":\"JeansJacket\",\r\n    \"imageUrl\": \"https://192.0.0.10:8080/redtape/jeans/jacket/teens/purple-jacket.jpge\",\r\n    \"price\": \"5000.00\",\r\n    \"discount\": \"50.0\",\r\n    \"arrival\": \"NEW\",\r\n    \"manufacturedCompany\": \"Red Tape\",\r\n    \"manufacturedCompanyLocation\": \"Padma\",\r\n    \"manufacturedCompanyCountry\": \"India\",\r\n    \"manufacturedDate\": \"2021/01/01\",\r\n    \"featureDetails\": \"Jacket Teens\",\r\n    \"description\": \"red tape teens jeans jacket purple M size\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8100/api/fashion",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"fashion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create BooksMoviesMusicGamesProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brandName\": \"Himalaya\",\r\n    \"productCategory\": \"BOOKSMOVIESMUSICGAMES\",\r\n    \"productSubCategory\": \"BOOK\",\r\n    \"ageGroup\":\"TEENS\",\r\n    \"gender\": \"NONE\",\r\n    \"color\": \"MULTICOLOR\",\r\n    \"size\": \"M\",\r\n    \"productName\":\"Mathematics-Class-V\",\r\n    \"imageUrl\": \"https://192.0.0.10:8080/him/maths/v/teens/r-d-sharma-v.jpge\",\r\n    \"price\": \"5000.00\",\r\n    \"discount\": \"50.0\",\r\n    \"arrival\": \"SERIES\",\r\n    \"manufacturedCompany\": \"Himalaya\",\r\n    \"manufacturedCompanyLocation\": \"Padma\",\r\n    \"manufacturedCompanyCountry\": \"India\",\r\n    \"manufacturedDate\": \"2021/01/01\",\r\n    \"featureDetails\": \"Mathematics-Class-V\",\r\n    \"description\": \"Mathematics-Class-V R D Sharma Himalaya Publications\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8100/api/booksmoviesmusicgames",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"booksmoviesmusicgames"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create BeautyAndPersonalCareProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brandName\": \"Oriflame\",\r\n    \"productCategory\": \"BEAUTYANDPERSONALCARE\",\r\n    \"productSubCategory\": \"CREAM\",\r\n    \"ageGroup\":\"ADULT\",\r\n    \"gender\": \"FEMALE\",\r\n    \"color\": \"WHITE\",\r\n    \"size\": \"S\",\r\n    \"productName\":\"AllDayCream\",\r\n    \"imageUrl\": \"https://192.0.0.10:8080/oriflame/women/cream/alldaynight/alldaynighr-cream.jpge\",\r\n    \"price\": \"5000.00\",\r\n    \"discount\": \"50.0\",\r\n    \"arrival\": \"NEW\",\r\n    \"manufacturedCompany\": \"Oriflame\",\r\n    \"manufacturedCompanyLocation\": \"Padma\",\r\n    \"manufacturedCompanyCountry\": \"Sweden\",\r\n    \"manufacturedDate\": \"2021/01/01\",\r\n    \"featureDetails\": \"Face all day night cream for women\",\r\n    \"description\": \"Face all day night cream for women from Oriflame Sweden\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8100/api/beautyandpersonalcare",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"beautyandpersonalcare"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create FoodAndBeverageProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brandName\": \"BabaRiceProduct\",\r\n    \"productCategory\": \"FOODANDBEVERAGE\",\r\n    \"productSubCategory\": \"RICE\",\r\n    \"ageGroup\":\"ADULT\",\r\n    \"gender\": \"NONE\",\r\n    \"color\": \"WHITE\",\r\n    \"size\": \"XS\",\r\n    \"productName\":\"GovidBogRice\",\r\n    \"imageUrl\": \"https://192.0.0.10:8080/baba/rice/govid-bog-rice-150.jpge\",\r\n    \"price\": \"150.00\",\r\n    \"discount\": \"0.0\",\r\n    \"arrival\": \"SERIES\",\r\n    \"manufacturedCompany\": \"BabaRiceProduct\",\r\n    \"manufacturedCompanyLocation\": \"Padma\",\r\n    \"manufacturedCompanyCountry\": \"India\",\r\n    \"manufacturedDate\": \"2021/01/01\",\r\n    \"featureDetails\": \"Baba Rice Govid Bog Rice 150/kg\",\r\n    \"description\": \"Baba Rice Govid Bog Rice 150/kg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8100/api/foodandbeverage",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"foodandbeverage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create GroceryProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brandName\": \"Philips\",\r\n    \"productCategory\": \"GROCERY\",\r\n    \"productSubCategory\": \"KITCHEN_APPLIANCES\",\r\n    \"ageGroup\":\"ADULT\",\r\n    \"gender\": \"NONE\",\r\n    \"color\": \"WHITE\",\r\n    \"size\": \"M\",\r\n    \"productName\":\"MixerGrinder\",\r\n    \"imageUrl\": \"https://192.0.0.10:8080/philips/kitchen/mixer-grinder.jpge\",\r\n    \"price\": \"5000.00\",\r\n    \"discount\": \"0.0\",\r\n    \"arrival\": \"SERIES\",\r\n    \"manufacturedCompany\": \"Philips\",\r\n    \"manufacturedCompanyLocation\": \"Padma\",\r\n    \"manufacturedCompanyCountry\": \"India\",\r\n    \"manufacturedDate\": \"2021/01/01\",\r\n    \"featureDetails\": \"Philips Mixer Grinder\",\r\n    \"description\": \"Philips Mixer Grinder\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8100/api/grocery",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"grocery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create HomeDecorationProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brandName\": \"Furniture\",\r\n    \"productCategory\": \"HOMEDECORATION\",\r\n    \"productSubCategory\": \"DININGTABLE\",\r\n    \"ageGroup\":\"ALL\",\r\n    \"gender\": \"NONE\",\r\n    \"color\": \"BROWN\",\r\n    \"size\": \"XL\",\r\n    \"productName\":\"DININGTABLE\",\r\n    \"imageUrl\": \"https://192.0.0.10:8080/furniture/dining-table-xl.jpge\",\r\n    \"price\": \"5900000.00\",\r\n    \"discount\": \"10.0\",\r\n    \"arrival\": \"SERIES\",\r\n    \"manufacturedCompany\": \"Furniture\",\r\n    \"manufacturedCompanyLocation\": \"Padma\",\r\n    \"manufacturedCompanyCountry\": \"India\",\r\n    \"manufacturedDate\": \"2021/01/01\",\r\n    \"featureDetails\": \"DINING TABLE XL BROWN\",\r\n    \"description\": \"DINING TABLE XL BROWN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8100/api/homedecoration",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"api",
+						"homedecoration"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

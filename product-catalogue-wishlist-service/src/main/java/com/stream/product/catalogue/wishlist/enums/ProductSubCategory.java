@@ -15,6 +15,7 @@ public enum ProductSubCategory {
     FOOTWEAR(ProductCategory.FASHION),
     SUNGLASS(ProductCategory.FASHION),
 
+
     DININGTABLE(ProductCategory.HOMEDECORATION),
     BEDSHEET(ProductCategory.HOMEDECORATION),
 
@@ -25,6 +26,7 @@ public enum ProductSubCategory {
     KITCHEN_APPLIANCES(ProductCategory.GROCERY),
 
     LITERATURE(ProductCategory.BOOKSMOVIESMUSICGAMES),
+    BOOK(ProductCategory.BOOKSMOVIESMUSICGAMES),
 
 
     PERFUME(ProductCategory.BEAUTYANDPERSONALCARE),

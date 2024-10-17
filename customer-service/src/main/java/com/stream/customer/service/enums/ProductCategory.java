@@ -1,4 +1,4 @@
-package com.ecommerce.customerservice.enums;
+package com.stream.customer.service.enums;
 
 
 import lombok.Getter;
